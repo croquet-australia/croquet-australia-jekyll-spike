@@ -1,0 +1,29 @@
+{
+  "name": "croquet-australia.com.au",
+  "version": "0.0.0",
+  "description": "Croquet Australia - https://croquet-australia.com.au",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-shell": "^0.5.1",
+    "gulp-task-listing": "^1.0.0",
+    "gulp-util": "^3.0.4"
+  },
+  "scripts": {
+    "init": "npm install",
+    "install": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/croquet-australia/croquet-australia.com.au.git"
+  },
+  "author": "Tim Murphy",
+  "license": "SEE LICENSE IN LICENSE FILE",
+  "bugs": {
+    "url": "https://github.com/croquet-australia/croquet-australia.com.au/issues"
+  },
+  "homepage": "https://github.com/croquet-australia/croquet-australia.com.au#readme"
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="blog-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="name headline">{{ page.title }}</h1>
+    <p class="blog-post-published">
+      <datetime datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted {{ page.date | date: "%A, %B %-d, %Y" }}</datetime>
+      by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+    </p>
+  </header>
+  <div class="blog-post-content" itemprop="articleBody">
+    {{ page.content }}
+  </div>
+</article>

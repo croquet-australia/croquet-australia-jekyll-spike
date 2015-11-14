@@ -1,0 +1,14 @@
+.jekyll-metadata
+
+_site/
+.sass-cache/
+
+# todo: remove following lines when site it ready for deployment.
+_posts/
+disciplines/
+files/
+governance/
+news/
+tournaments/
+test-2.md
+test.md

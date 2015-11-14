@@ -1,0 +1,17 @@
+{
+  "name": "croquet-australia.com.au",
+  "description": "Croquet Australia - https://croquet-australia.com.au",
+  "main": "gulpfile.js",
+  "authors": [
+    "Tim Murphy"
+  ],
+  "license": "SEE LICENSE IN LICENSE FILE",
+  "homepage": "https://github.com/croquet-australia/croquet-australia.com.au",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
