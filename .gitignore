@@ -1,5 +1,14 @@
 # Common
+# ------------------------------------------------
+
+.sass-cache/
+artifacts/
+bower_components/
 node_modules/
 tools/
 
+.jekyll-metadata
+npm-debug.log
+
 # Solution specific
+# ------------------------------------------------
