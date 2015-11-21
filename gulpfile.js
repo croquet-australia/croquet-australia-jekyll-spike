@@ -17,6 +17,14 @@ gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
 
 /**
+ * Builds the Jekyll website
+ */
+gulp.task('build', function() {
+    log('Building Jekyll website...');
+    return runJekyllCommand('build');
+});
+
+/**
  * Runs the Jekyll website
  * 
  * The 'run' task builds the Jekyll website and loads it in the
@@ -47,17 +55,7 @@ gulp.task('run-browserSync', function () {
  */
 gulp.task('run-jekyll', function () {
     log('Starting Jekyll server...');
-
-    var command = 'jekyll serve --incremental --source ./source --destination ./artifacts';
-    var options = {
-        env: {
-            path: '.\\tools\\ruby\\bin;.\\tools\\ruby-devkit\\bin;' + process.env.PATH
-        }
-    };
-
-    return gulp
-        .src('./source/index.html', { read: false })
-        .pipe(shell(command, options));
+    return runJekyllCommand('serve');
 });
 
 /**
@@ -82,4 +80,18 @@ function log(msg) {
     } else {
         $.util.log($.util.colors.yellow(msg));
     }
+}
+
+function runJekyllCommand(jekyllCommand) {
+
+    var command = 'jekyll ' + jekyllCommand + ' --incremental --source ./source --destination ./artifacts';
+    var options = {
+        env: {
+            path: '.\\tools\\ruby\\bin;.\\tools\\ruby-devkit\\bin;' + process.env.PATH
+        }
+    };
+
+    return gulp
+        .src('./source/index.html', { read: false })
+        .pipe(shell(command, options));
 }
