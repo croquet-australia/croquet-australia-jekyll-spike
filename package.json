@@ -14,7 +14,7 @@
   },
   "scripts": {
     "init": "npm install",
-    "install": "bower install",
+    "install": "powershell.exe -NoProfile -ExecutionPolicy unrestricted -Command ./scripts/npm-Install.ps1 && exit $lastexitcode",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

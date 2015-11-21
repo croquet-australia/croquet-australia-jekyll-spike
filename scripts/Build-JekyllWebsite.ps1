@@ -46,7 +46,7 @@ Function Main([string] $RepositoryDirectory, [string] $ToolsDirectory)
     Catch {
         Write-AzureHost $_
         
-        If ($initialLocation -ne 0) {
+        If ($lastexitcode -ne 0) {
             exit $lastexitcode            
         }
         exit 1
