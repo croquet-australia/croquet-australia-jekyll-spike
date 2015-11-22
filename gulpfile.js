@@ -84,10 +84,11 @@ function log(msg) {
 
 function runJekyllCommand(jekyllCommand) {
 
+    var toolsDirectory = process.env.DEPLOYMENT_TOOLS || '.\\tools';    
     var command = 'jekyll ' + jekyllCommand + ' --incremental --source ./source --destination ./artifacts';
     var options = {
         env: {
-            path: '.\\tools\\ruby\\bin;.\\tools\\ruby-devkit\\bin;' + process.env.PATH
+            path: toolsDirectory + '\\ruby\\bin;' + toolsDirectory + '\\ruby-devkit\\bin;' + process.env.PATH
         }
     };
 
